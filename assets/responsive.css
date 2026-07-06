@@ -34,16 +34,17 @@
 @media(max-width:768px){
 
 .hero-container{
-
+display:grid;
 grid-template-columns:1fr;
 
 text-align:center;
+gap:40;
 
 }
 
 .hero-image{
 
-order:-1;
+order:2;
 
 }
 
@@ -64,6 +65,49 @@ flex-wrap:wrap;
 .hero-rating{
 
 font-size:16px;
+
+}
+
+}
+
+
+/*================
+    Product Modal
+    =================*/
+
+    @media(max-width:768px){
+
+.product-modal{
+
+grid-template-columns:1fr;
+
+padding:25px;
+
+}
+
+.modal-left img{
+
+height:250px;
+
+}
+
+.modal-right h2{
+
+font-size:28px;
+
+text-align:center;
+
+}
+
+.modal-right h3{
+
+text-align:center;
+
+}
+
+.modal-buttons{
+
+flex-direction:column;
 
 }
 
