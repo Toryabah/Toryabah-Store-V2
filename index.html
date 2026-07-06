@@ -275,9 +275,12 @@
     <footer id="footer"></footer>
 
     <!-- Toast -->
+
+
     <div id="toast"></div>
 
     
+                <div id="productModal"></div>
             <div class="modal" id="productModal">
 
                 <div class="modal-content">
@@ -322,87 +325,114 @@
 
     <!-- Product Modal -->
 
-    <!-- ==========================
+    <!-- ==========================================
         PRODUCT QUICK VIEW MODAL
-        ========================== -->
+=========================================== -->
 
-        <div class="modal-overlay" id="modalOverlay">
+<div class="modal-overlay" id="modalOverlay">
 
-        <div class="product-modal">
+    <div class="product-modal">
 
-            <span class="close-modal" id="closeModal">
+        <!-- Close Button -->
+        <span class="close-modal" id="closeModal">&times;</span>
 
-                &times;
+        <!-- Left Side -->
+        <div class="modal-left">
 
-            </span>
+            <img
+                id="modalImage"
+                src=""
+                alt="Product Image"
+            >
 
-            <div class="modal-left">
+        </div>
 
-                <img src="" id="modalImage">
+        <!-- Right Side -->
+        <div class="modal-right">
+
+            <!-- Product Badge -->
+            <span id="modalBadge" class="modal-badge"></span>
+
+            <!-- Product Name -->
+            <h2 id="modalTitle"></h2>
+
+            <!-- Brand -->
+            <p class="modal-brand">
+                Brand: 
+                <span id="modalBrand"></span>
+            </p>
+
+            <!-- Category -->
+            <p class="modal-category">
+                Category:
+                <span id="modalCategory"></span>
+            </p>
+
+
+            <!-- Rating -->
+            <div id="modalStars" class="modal-stars"></div>
+
+            <!-- Price -->
+            <div id="modalPrice" class="modal-price"></div>
+
+            <!-- Description -->
+            <p id="modalDescription" class="modal-description"></p>
+
+            <!-- Quantity -->
+
+            <div class="quantity-box">
+
+                <button id="decreaseQty">−</button>
+
+                <span id="modalQuantity">1</span>
+
+                <button id="increaseQty">+</button>
 
             </div>
 
-            <div class="modal-right">
+            <!-- Buttons -->
 
-                <h2 id="modalTitle"></h2>
+            <div class="modal-buttons">
 
-                <div id="modalStars"></div>
+                <button id="modalCartBtn">
 
-                <h3 id="modalPrice"></h3>
+                    <i class="fas fa-shopping-cart"></i>
 
-                <p id="modalDescription"></p>
+                    Add To Cart
 
-                <!-- Quantity -->
+                </button>
 
-                <div class="quantity-box">
+                <button id="modalWishlistBtn">
 
-                    <button id="decreaseQty">−</button>
+                    <i class="far fa-heart"></i>
 
-                    <span id="modalQuantity">1</span>
-
-                    <button id="increaseQty">+</button>
-
-                </div>
-
-                <div class="modal-buttons">
-
-                    <button id="modalCartBtn">
-
-                        <i class="fas fa-shopping-cart"></i>
-
-                        Add To Cart
-
-                    </button>
-
-                    <button id="modalWishlistBtn">
-
-                        <i class="far fa-heart"></i>
-
-                    </button>
-
-                </div>
+                </button>
 
             </div>
 
         </div>
 
     </div>
-    <div id="productModal"></div>
+
+</div>
+    
 
     <!-- Cart Sidebar -->
     <div id="cartSidebar"></div>
 
     <!-- JS -->
+
     <script src="assets/js/products.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/filter.js"></script>
     <script src="assets/js/sort.js"></script>
-    <script src="assets/js/modal.js"></script>
     <script src="assets/js/wishlist.js"></script>
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/modal.js"></script>
+
     <script src="assets/js/count.js"></script>
-    <script src="assets/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

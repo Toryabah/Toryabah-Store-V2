@@ -33,7 +33,7 @@ price:189,
 oldPrice:229,
 rating:5,
 badge:"NEW",
-description:"Powerful laptop for work and play.",
+description: "A powerful HP EliteBook designed for work, business and everyday productivity.",
 image:"assets/image/laptops.jpeg"},
 
 {
@@ -46,7 +46,7 @@ oldPrice:229,
 rating:5,
 badge:"NEW",
 description:"Comfortable and stylish sneakers.",
-image:"assets/image/Head-set.png"
+image:"assets/image/sneakers.png"
 },
 
 {

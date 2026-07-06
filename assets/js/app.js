@@ -1,22 +1,46 @@
-const grid = document.querySelector(".products-grid");
+// =============================
+// APP.JS
+// Display Products
+// =============================
 
+const productsGrid = document.querySelector(".products-grid");
+
+/**
+ * Display Products
+ */
 function displayProducts(data = products) {
 
-    if (!grid) return;
+    if (!productsGrid) return;
 
-    grid.innerHTML = "";
+    productsGrid.innerHTML = "";
+
+    if (data.length === 0) {
+
+        productsGrid.innerHTML = `
+            <div class="no-products">
+                <h2>No Products Found</h2>
+                <p>Try another search or category.</p>
+            </div>
+        `;
+
+        return;
+    }
 
     data.forEach(product => {
 
         const card = document.createElement("div");
 
-        card.className = "product-card";
+        card.classList.add("product-card");
 
         card.innerHTML = `
 
-            <span class="badge">${product.badge}</span>
+            <span class="badge">${product.badge || ""}</span>
 
-            <img src="${product.image}" alt="${product.name}">
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                loading="lazy"
+            >
 
             <div class="product-info">
 
@@ -29,44 +53,77 @@ function displayProducts(data = products) {
                 </div>
 
                 <div class="price">
-                    <span class="new-price">$${product.price}</span>
-                    <span class="old-price">$${product.oldPrice}</span>
+
+                    <span class="new-price">
+
+                        $${product.price}
+
+                    </span>
+
+                    <span class="old-price">
+
+                        $${product.oldPrice}
+
+                    </span>
+
                 </div>
 
                 <div class="product-buttons">
 
-    <button class="cart-btn"
-    onclick="addToCart(${product.id})">
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart(${product.id})">
 
-        <i class="fas fa-shopping-cart"></i>
-        Add To Cart
+                        <i class="fas fa-shopping-cart"></i>
 
-    </button>
+                        Add To Cart
 
-    <button class="view-btn"
-    onclick="openModal(${product.id})">
+                    </button>
 
-        <i class="fas fa-eye"></i>
+                    <button
+                        class="view-btn"
+                        onclick="openModal(${product.id})">
 
-    </button>
+                        <i class="fas fa-eye"></i>
 
-    <button class="wishlist-btn"
-    onclick="toggleWishlist(${product.id})">
+                    </button>
 
-        <i class="far fa-heart"></i>
+                    <button
+                        class="wishlist-btn"
+                        onclick="toggleWishlist(${product.id})">
 
-    </button>
+                        <i class="far fa-heart"></i>
 
-</div>
+                    </button>
+
+                </div>
 
             </div>
 
         `;
 
-        grid.appendChild(card);
+        productsGrid.appendChild(card);
 
     });
 
 }
 
-displayProducts();
+/**
+ * Refresh Products
+ */
+
+function refreshProducts(filteredProducts){
+
+    displayProducts(filteredProducts);
+
+}
+
+/**
+ * Initialize
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    displayProducts();
+
+});
