@@ -26,3 +26,45 @@
     }
 
 }
+
+
+
+/* HERO */
+
+@media(max-width:768px){
+
+.hero-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-image{
+
+order:-1;
+
+}
+
+.hero-content h1{
+
+font-size:38px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.hero-rating{
+
+font-size:16px;
+
+}
+
+}

@@ -76,13 +76,180 @@
 </header>
 
     <!-- Hero -->
-    <section id="hero"></section>
+    <section class="hero" id="hero">
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                🔥 Summer Sale - Up to 50% Off This Week
+            </span>
+
+            <h1>
+                Shop Smarter, <span class="hero-tag">Liver Better</span>
+            </h1>
+
+            <p>
+
+                Shop the latest fashion, electronics,
+                accessories and lifestyle products
+                at unbeatable prices.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#featured-products" class="shop-btn">
+
+                    Shop Now
+
+                </a>
+
+                <a href="#" class="explore-btn">
+
+                    Explore
+
+                </a>
+
+            </div>
+
+            <div class="hero-rating">
+
+                ⭐⭐⭐⭐⭐
+
+                <span class="hero-tag">
+
+                    4.9/5 Trusted by 10,000+ Customers
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="./assets/image/Head-set.png" alt="Hero Product">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
 
     <!-- Categories -->
-    <section id="categories"></section>
+
+<section class="categories" id="categories">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Shop by Category</h2>
+
+            <p>Browse our most popular collections.</p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <img src="./assets/image/industries-electronics.jpeg" alt="Electronics">
+                <h3>Electronics</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/images/categories/fashion.png" alt="Fashion">
+                <h3>Fashion</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="./assets/image/Samsung-Galaxy-watch-8.png" alt="Watches">
+                <h3>Watches</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="./assets/image/Head-set.png" alt="Audio">
+                <h3>Audio</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="./assets/image/running-shoe.png" alt="Laptops">
+                <h3>Laptops</h3>
+            </div>
+
+            <div class="category-card">
+                <img src="./assets/image/home.png" alt="Home">
+                <h3>Home</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
     <!-- Flash Sale -->
-    <section id="flash-sale"></section>
+
+<section class="flash-sale" id="flash-sale">
+
+        <div class="container">
+
+        <div class="flash-header">
+
+        <h2>
+
+        🔥 Flash Sale
+
+        </h2>
+
+        <div class="countdown">
+
+        <div>
+
+        <span id="days">00</span>
+
+        <small>Days</small>
+
+        </div>
+
+        <div>
+
+        <span id="hours">00</span>
+
+        <small>Hours</small>
+
+        </div>
+
+        <div>
+
+        <span id="minutes">00</span>
+
+        <small>Minutes</small>
+
+        </div>
+
+        <div>
+
+        <span id="seconds">00</span>
+
+        <small>Seconds</small>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+</section>
 
     <!-- Featured Products -->
     <section id="featured-products">
@@ -108,7 +275,49 @@
     <footer id="footer"></footer>
 
     <!-- Toast -->
-    <div id="toast"></div> 
+    <div id="toast"></div>
+    
+    <div class="modal" id="productModal">
+
+        <div class="modal-content">
+
+                <span class="close-modal">
+
+                &times;
+
+                </span>
+
+                <div class="modal-body">
+
+                <div class="modal-image">
+
+                <img id="modalImg">
+
+                </div>
+
+                <div class="modal-details">
+
+                <h2 id="modalTitle"></h2>
+
+                <div id="modalStars"></div>
+
+                <p id="modalPrice"></p>
+
+                <p id="modalDescription"></p>
+
+                <button id="modalCart">
+
+                Add To Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
     <!-- Product Modal -->
     <div id="productModal"></div>
@@ -125,7 +334,8 @@
     <script src="assets/js/modal.js"></script>
     <script src="assets/js/wishlist.js"></script>
     <script src="assets/js/cart.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/count.js"></script>
+    <script src="assets/main.js"></script>
 
 </body>
 </html>
