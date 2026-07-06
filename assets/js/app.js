@@ -79,7 +79,6 @@ function displayProducts(data = products) {
                         Add To Cart
 
                     </button>
-
                     <button
                         class="view-btn"
                         onclick="openModal(${product.id})">

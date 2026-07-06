@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Toryabah Store</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/checkout.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="checkout-header">
+
+    <a href="index.html" class="logo">
+
+        Toryabah <span>Store</span>
+
+    </a>
+
+</header>
+
+
+<section class="checkout-container">
+
+    <!-- CUSTOMER DETAILS -->
+
+    <div class="checkout-form">
+
+        <h2>Billing Details</h2>
+
+        <form id="checkoutForm">
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required>
+
+            <textarea
+                id="address"
+                placeholder="Delivery Address"
+                rows="4"
+                required></textarea>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="City"
+                required>
+
+            <input
+                type="text"
+                id="state"
+                placeholder="State"
+                required>
+
+            <select id="country">
+
+                <option>Nigeria</option>
+
+                <option>Ghana</option>
+
+                <option>Kenya</option>
+
+                <option>South Africa</option>
+
+            </select>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- ORDER SUMMARY -->
+
+    <div class="order-summary">
+
+        <h2>Your Order</h2>
+
+        <div id="checkoutItems">
+
+        </div>
+
+        <div class="summary-total">
+
+            <h3>
+
+                Total
+
+                <span id="checkoutTotal">
+
+                    $0
+
+                </span>
+
+            </h3>
+
+        </div>
+
+        <button id="placeOrderBtn">
+
+            Place Order
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/checkout.js"></script>
+
+</body>
+</html>
