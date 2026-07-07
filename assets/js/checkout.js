@@ -4,7 +4,7 @@
 // =========================================
 
 // Get cart from Local Storage
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const checkoutCart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const checkoutItems = document.getElementById("checkoutItems");
 const checkoutTotal = document.getElementById("checkoutTotal");
@@ -77,7 +77,7 @@ function renderCheckout() {
 // PLACE ORDER
 // ------------------------------
 
-function placeOrder() {
+ /*function placeOrder() {
 
     const fullName = document.getElementById("fullName").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -121,7 +121,9 @@ function placeOrder() {
 
         orderDate: new Date().toLocaleString()
 
-    };
+        payWithPaystack(order,total);
+
+    };  
 
     // Save latest order
     localStorage.setItem("lastOrder", JSON.stringify(order));
@@ -137,10 +139,88 @@ function placeOrder() {
 // ------------------------------
 // EVENT LISTENER
 // ------------------------------
-
+*/
 if (placeOrderBtn) {
 
     placeOrderBtn.addEventListener("click", placeOrder);
+
+} 
+
+
+
+    function placeOrder() {
+
+    const fullName=document.getElementById("fullName").value.trim();
+
+    const email=document.getElementById("email").value.trim();
+
+    const phone=document.getElementById("phone").value.trim();
+
+    const address=document.getElementById("address").value.trim();
+
+    const city=document.getElementById("city").value.trim();
+
+    const state=document.getElementById("state").value.trim();
+
+    const country=document.getElementById("country").value;
+
+    if(
+
+        !fullName ||
+
+        !email ||
+
+        !phone ||
+
+        !address ||
+
+        !city ||
+
+        !state
+
+    ){
+
+        alert("Please complete all required fields.");
+
+        return;
+
+    }
+
+    let total=0;
+
+    cart.forEach(item=>{
+
+        total += item.price * item.quantity;
+
+    });
+
+    const order={
+
+        customer:{
+
+            fullName,
+
+            email,
+
+            phone,
+
+            address,
+
+            city,
+
+            state,
+
+            country
+
+        },
+
+        items:cart,
+
+        total:`₦${total.toLocaleString()}`
+
+    };
+
+    payWithPaystack(order,total);
 
 }
 
@@ -149,3 +229,12 @@ if (placeOrderBtn) {
 // ------------------------------
 
 renderCheckout();
+
+
+
+
+
+
+document.getElementById("placeOrderBtn").onclick = function () {
+    alert("Button Clicked!");
+};

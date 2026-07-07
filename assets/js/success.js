@@ -45,3 +45,55 @@ document
 window.print();
 
 });
+
+
+// Add the EmailJS SDK
+
+
+function sendConfirmationEmail(order){
+
+    if(!order) return;
+
+    emailjs.send(
+
+        "service_tkjejep",
+
+        "template_xax5mrn",
+
+        {
+
+            customer_name: order.customer.fullName,
+
+            reply_to: order.customer.email,
+
+            order_number: order.orderNumber,
+
+            reference: order.reference,
+
+            amount: order.total
+
+        }
+
+    )
+
+    .then(()=>{
+
+        console.log("Confirmation email sent.");
+
+    })
+
+    .catch(error=>{
+
+        console.error("Email failed:", error);
+
+    });
+
+}
+
+if(order && !sessionStorage.getItem("emailSent")){
+
+    sendConfirmationEmail(order);
+
+    sessionStorage.setItem("emailSent","true");
+
+}
