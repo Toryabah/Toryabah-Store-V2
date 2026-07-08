@@ -6,8 +6,12 @@
     <title>Toryabah Store | Shop Smart, Live Better</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/wishlist.css">
+
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/backtotop.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -15,6 +19,15 @@
 </head>
 
 <body>
+
+    <!---PRELOADER-->
+
+
+    <div id="preloader">
+        <div class="loader"></div>
+        <h2>Hello 👋 Welcome to Toryabah Store</h2>
+    </div>
+
 
     <!-- Header -->
     
@@ -50,8 +63,12 @@
 
         <!-- Icons -->
         <div class="nav-icons">
+            
 
-            <a href="#" class="wishlist-icon">
+            <a href="javascript:void(0)"
+                class="wishlist-icon"
+                onclick="openWishlist()">
+
                 <i class="far fa-heart"></i>
                 <span class="wishlist-count">0</span>
             </a>
@@ -61,9 +78,56 @@
                 <span class="cart-count">0</span>
             </a>
 
-            <a href="#">
+            <!-- User Icon Activate-->
+
+            <div class="user-menu">
+
+            <button class="user-btn" onclick="toggleUserMenu()">
+
                 <i class="far fa-user"></i>
+
+            </button>
+
+        <div class="user-dropdown" id="userDropdown">
+
+            <div class="user-header">
+
+                <h4>Hello 👋</h4>
+
+                <p>Welcome to Toryabah Store</p>
+
+            </div>
+
+            <a href="#">
+                <i class="fas fa-user-circle"></i>
+                My Profile
             </a>
+
+            <a href="#">
+                <i class="fas fa-box"></i>
+                My Orders
+            </a>
+
+            <a href="javascript:void(0)" onclick="openWishlist()">
+                <i class="fas fa-heart"></i>
+                Wishlist
+            </a>
+
+            <a href="contact.html">
+                <i class="fas fa-headset"></i>
+                Customer Support
+            </a>
+
+            <hr>
+
+            <a href="#">
+                <i class="fas fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </div>
 
             <div class="menu-toggle" id="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -76,115 +140,138 @@
 </header>
 
     <!-- Hero -->
-    <section class="hero" id="hero">
+    <!-- ==========================
+        PREMIUM HERO SECTION
+=========================== -->
+
+<section class="hero">
 
     <div class="container hero-container">
 
+        <!-- Left Content -->
+
         <div class="hero-content">
 
-            <span class="hero-tag">
-                🔥 Summer Sale - Up to 50% Off This Week
+            <span class="hero-badge">
+
+                🔥 BIG SUMMER SALE
+
             </span>
 
             <h1>
-                Shop Smarter, <span class="hero-tag">Liver Better</span>
+
+                Discover Amazing
+
+                <span>Tech Deals</span>
+
+                Every Day
+
             </h1>
 
             <p>
 
-                Shop the latest fashion, electronics,
-                accessories and lifestyle products
-                at unbeatable prices.
+                Shop premium laptops, smartphones, smartwatches,
+
+                headphones and accessories at unbeatable prices.
+
+                Fast delivery, secure payments and trusted quality.
 
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#featured-products" class="shop-btn">
+                <a href="shop.html" class="hero-btn">
 
                     Shop Now
 
                 </a>
 
-                <a href="#" class="explore-btn">
+                <a href="#products" class="btn-outline">
 
-                    Explore
+                    View Deals
 
                 </a>
 
             </div>
 
-            <div class="hero-rating">
+            <!-- Statistics -->
 
-                ⭐⭐⭐⭐⭐
+            <div class="hero-stats">
 
-                <span class="hero-tag">
+                <div class="stat-box">
 
-                    4.9/5 Trusted by 10,000+ Customers
+                    <h3>500+</h3>
 
-                </span>
+                    <span>Happy Customers</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h3>800+</h3>
+
+                    <span>Products</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h3>24/7</h3>
+
+                    <span>Support</span>
+
+                </div>
 
             </div>
 
         </div>
+
+        <!-- Right Content -->
 
         <div class="hero-image">
 
-            <img src="./assets/image/Head-set.png" alt="Hero Product">
+            <div class="discount-circle">
 
-        </div>
+                <strong>50%</strong>
 
-    </div>
+                OFF
 
-</section>
-
-
-
-
-    <!-- Categories -->
-
-<section class="categories" id="categories">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Shop by Category</h2>
-
-            <p>Browse our most popular collections.</p>
-
-        </div>
-
-        <div class="category-grid">
-
-            <div class="category-card">
-                <img src="./assets/image/industries-electronics.jpeg" alt="Electronics">
-                <h3>Electronics</h3>
             </div>
 
-            <div class="category-card">
-                <img src="assets/images/categories/fashion.png" alt="Fashion">
-                <h3>Fashion</h3>
+            <img
+
+                src="assets/image/laptops.png"
+
+                alt="Laptop"
+
+                class="main-product"
+
+            >
+
+            <!-- Floating Cards -->
+
+            <div class="floating-card card-one">
+
+                <i class="fas fa-shipping-fast"></i>
+
+                <span>Fast Delivery</span>
+
             </div>
 
-            <div class="category-card">
-                <img src="./assets/image/Samsung-Galaxy-watch-8.png" alt="Watches">
-                <h3>Watches</h3>
+            <div class="floating-card card-two">
+
+                <i class="fas fa-shield-alt"></i>
+
+                <span>Secure Payment</span>
+
             </div>
 
-            <div class="category-card">
-                <img src="./assets/image/Head-set.png" alt="Audio">
-                <h3>Audio</h3>
-            </div>
+            <div class="floating-card card-three">
 
-            <div class="category-card">
-                <img src="./assets/image/running-shoe.png" alt="Laptops">
-                <h3>Laptops</h3>
-            </div>
+                <i class="fas fa-star"></i>
 
-            <div class="category-card">
-                <img src="./assets/image/home.png" alt="Home">
-                <h3>Home</h3>
+                <span>Top Rated</span>
+
             </div>
 
         </div>
@@ -192,7 +279,6 @@
     </div>
 
 </section>
-
 
 
     <!-- Flash Sale -->
@@ -252,27 +338,50 @@
 </section>
 
     <!-- Featured Products -->
-    <section id="featured-products">
+    <section  class="products" id="products">
         <div class="container">
 
             <div class="section-title">
 
-                <h2>Featured Products</h2>
+                <h2 class="section-title">Featured Products</h2>
 
                 <p>Carefully selected products for you.</p>
 
             </div>
 
-            <div class="products-grid"></div>
+            <div class="filter-bar">
+
+                <button class="filter-btn active" data-category="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-category="laptop">
+                    Laptops
+                </button>
+
+                <button class="filter-btn" data-category="AirPod">
+                    AirPod
+                </button>
+
+                <button class="filter-btn" data-category="watch">
+                    Smart Watches
+                </button>
+
+                <button class="filter-btn" data-category="Sneakers">
+                    Sneaker
+                </button>
+
+                <button class="filter-btn" data-category="Head Set">
+                    Head Set
+                </button>
+
+            </div>
+
+            <div class="products-grid" id="productsContainer"></div>
 
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section id="newsletter"></section>
-
-    <!-- Footer -->
-    <footer id="footer"></footer>
 
     <!-- Toast -->
 
@@ -326,50 +435,51 @@ SHOPPING CART SIDEBAR
 
 </div>
 
+
+
+<!--=================================
+        WISHLIST SIDEBAR OPEN
+==================================-->
+
+<div class="wishlist-sidebar" id="wishlistSidebar">
+
+    <div class="wishlist-header">
+
+        <h2>
+            <i class="fas fa-heart"></i>
+            My Wishlist
+        </h2>
+
+        <button class="close-wishlist"
+                onclick="closeWishlist()">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+    </div>
+
+    <div id="wishlistItems">
+
+        <div class="empty-wishlist">
+
+            <i class="far fa-heart"></i>
+
+            <p>Your wishlist is empty.</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="wishlist-overlay"
+     id="wishlistOverlay"
+     onclick="closeWishlist()">
+
+</div>
+
     
-                <div id="productModal"></div>
-            <div class="modal" id="productModal">
-
-                <div class="modal-content">
-
-                            <span class="close-modal">
-
-                            &times;
-
-                            </span>
-
-                    <div class="modal-body">
-
-                        <div class="modal-image">
-
-                            <img id="modalImg">
-
-                        </div>
-
-                        <div class="modal-details">
-
-                            <h2 id="modalTitle"></h2>
-
-                            <div id="modalStars"></div>
-
-                            <p id="modalPrice"></p>
-
-                            <p id="modalDescription"></p>
-
-                            <button id="modalCart">
-
-                            Add To Cart
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-          </div>
-
     <!-- Product Modal -->
 
     <!-- ==========================================
@@ -378,7 +488,7 @@ SHOPPING CART SIDEBAR
 
 <div class="modal-overlay" id="modalOverlay">
 
-    <div class="product-modal">
+    <div class="product-modal" id="productsModal">
 
         <!-- Close Button -->
         <span class="close-modal" id="closeModal">&times;</span>
@@ -464,8 +574,340 @@ SHOPPING CART SIDEBAR
 </div>
     
 
-    <!-- Cart Sidebar -->
-    <div id="cartSidebar"></div>
+   
+
+<!--=================================
+        TESTIMONIALS
+==================================-->
+
+<section class="testimonials" id="testimonials">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                💬 Testimonials
+            </span>
+
+            <h2>What Our Customers Say</h2>
+
+            <p>
+                Thousands of customers trust Toryabah Store for quality
+                products, fast delivery and outstanding customer service.
+            </p>
+
+        </div>
+
+        <div class="testimonials-grid">
+
+            <!-- Card 1 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+
+                    ⭐⭐⭐⭐⭐
+
+                </div>
+
+                <p class="review">
+
+                    "I bought my HP EliteBook from Toryabah Store and it arrived
+                    exactly as described. Excellent customer service and fast
+                    delivery."
+
+                </p>
+
+                <div class="customer">
+
+                    <img src="https://i.pravatar.cc/150?img=12"
+                         alt="Customer">
+
+                    <div>
+
+                        <h4>Aisha Bello</h4>
+
+                        <span>Lagos, Nigeria</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+
+                    ⭐⭐⭐⭐⭐
+
+                </div>
+
+                <p class="review">
+
+                    "The shopping experience was smooth from start to finish.
+                    The checkout process was easy and my order arrived on time."
+
+                </p>
+
+                <div class="customer">
+
+                    <img src="https://i.pravatar.cc/150?img=25"
+                         alt="Customer">
+
+                    <div>
+
+                        <h4>David Johnson</h4>
+
+                        <span>Abuja, Nigeria</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+
+                    ⭐⭐⭐⭐⭐
+
+                </div>
+
+                <p class="review">
+
+                    "I highly recommend Toryabah Store. The product quality is
+                    amazing and their support team is very responsive."
+
+                </p>
+
+                <div class="customer">
+
+                    <img src="https://i.pravatar.cc/150?img=36"
+                         alt="Customer">
+
+                    <div>
+
+                        <h4>Fatima Yusuf</h4>
+
+                        <span>Ibadan, Nigeria</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    
+<!--==============================
+NEWSLETTER
+===============================-->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-wrapper">
+
+            <div class="newsletter-content">
+
+                <span class="newsletter-tag">
+                    📩 NEWSLETTER
+                </span>
+
+                <h2>
+                    Stay Updated With
+                    <span>Toryabah Store</span>
+                </h2>
+
+                <p>
+
+                    Subscribe to receive exclusive discounts,
+                    flash sales, new arrivals and special offers
+                    delivered directly to your inbox.
+
+                </p>
+
+            </div>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required>
+
+                <button type="submit">
+
+                    Subscribe
+
+                    <i class="fas fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+    
+
+   <!--=====================================
+        PREMIUM FOOTER
+======================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- Company -->
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    Toryabah <span>Store</span>
+                </a>
+
+                <p>
+                    Toryabah Store is your trusted destination for premium laptops,
+                    smartphones, smart gadgets and quality accessories at affordable
+                    prices.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="shop.html">Shop</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Customer Support -->
+
+            <div class="footer-column">
+
+                <h3>Customer Support</h3>
+
+                <ul>
+
+                    <li><a href="#">Help Center</a></li>
+
+                    <li><a href="#">Shipping</a></li>
+
+                    <li><a href="#">Returns</a></li>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>Contact Us</h3>
+
+                <ul class="contact-info">
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Lagos, Nigeria
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +234 XXX XXX XXXX
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        support@toryabahstore.com
+                    </li>
+
+                </ul>
+
+                <div class="payment-icons">
+
+                    <i class="fab fa-cc-visa"></i>
+
+                    <i class="fab fa-cc-mastercard"></i>
+
+                    <i class="fab fa-cc-paypal"></i>
+
+                    <i class="fas fa-credit-card"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Toryabah Store.
+                All Rights Reserved.
+
+            </p>
+
+            <span>
+
+                Designed by
+                <strong>Toryabah Tech</strong>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
 
     <!-- JS -->
 
@@ -477,18 +919,23 @@ SHOPPING CART SIDEBAR
 
 <script src="assets/js/wishlist.js"></script>
 
-<script src="assets/js/search.js"></script>
 
-<script src="assets/js/filter.js"></script>
-
-<script src="assets/js/sort.js"></script>
-
-<script src="assets/js/countdown.js"></script>
+<script src="assets/js/count.js"></script>
 
 <script src="assets/js/app.js"></script>
+<script src="assets/js/navbar.js"></script>
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/payment.js"></script>
 
+
+
+
+        <a href="https://wa.me/+2348142715428" 
+                style="position:fixed;bottom:60px;right:20px;
+                background:#25D366;color:white;
+                padding:15px;border-radius:50%;">
+                Chat
+            </a>
 </body>
 </html>

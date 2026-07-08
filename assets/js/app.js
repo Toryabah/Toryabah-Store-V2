@@ -101,9 +101,23 @@ function displayProducts(data = products) {
 
         `;
 
+        card.style.opacity="0";
+
+        card.style.transform="translateY(30px)";
+
         productsGrid.appendChild(card);
 
-    });
+        setTimeout(()=>{
+
+        card.style.transition=".4s";
+
+        card.style.opacity="1";
+
+        card.style.transform="translateY(0)";
+
+        },100);
+
+            });
 
 }
 
@@ -117,6 +131,43 @@ function refreshProducts(filteredProducts){
 
 }
 
+
+//==============================
+// FILTER PRODUCTS
+//==============================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+filterButtons.forEach(btn=>btn.classList.remove("active"));
+
+button.classList.add("active");
+
+const category = button.dataset.category;
+
+if(category==="all"){
+
+displayProducts(products);
+
+return;
+
+}
+
+const filtered = products.filter(product=>
+
+product.category.toLowerCase()===category.toLowerCase()
+
+);
+
+displayProducts(filtered);
+
+});
+
+});
+
 /**
  * Initialize
  */
@@ -126,3 +177,71 @@ document.addEventListener("DOMContentLoaded", () => {
     displayProducts();
 
 });
+
+
+
+//Wishlist Open Sidebar
+
+function openWishlist(){
+
+    renderWishlist();
+
+    document
+    .getElementById("wishlistSidebar")
+    .classList.add("active");
+
+    document
+    .getElementById("wishlistOverlay")
+    .classList.add("active");
+
+}
+
+function closeWishlist(){
+
+document
+.getElementById("wishlistSidebar")
+.classList.remove("active");
+
+document
+.getElementById("wishlistOverlay")
+.classList.remove("active");
+
+}
+
+
+
+
+//==============================
+// USER DROPDOWN
+//==============================
+
+function toggleUserMenu(){
+
+document
+.getElementById("userDropdown")
+.classList.toggle("active");
+
+}
+
+
+
+// Close when click outside
+
+
+document.addEventListener("click",function(e){
+
+const menu=document.querySelector(".user-menu");
+
+const dropdown=document.getElementById("userDropdown");
+
+if(!menu.contains(e.target)){
+
+dropdown.classList.remove("active");
+
+}
+
+});
+
+
+//Function For Opening wishList sideBar
+

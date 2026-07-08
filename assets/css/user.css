@@ -1,0 +1,171 @@
+/* =====================
+HEADER
+===================== */
+
+
+/*==================================
+        USER MENU
+==================================*/
+
+.user-menu{
+
+position:relative;
+
+}
+
+.user-btn{
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+font-size:22px;
+
+color:#333;
+
+}
+
+.user-btn:hover{
+
+color:var(--primary);
+
+}
+
+
+
+/*==============
+        Menu User Dropdown
+        ===============*/
+
+
+.user-dropdown{
+
+position:absolute;
+
+top:60px;
+
+right:0;
+
+width:270px;
+
+background:#fff;
+
+border-radius:18px;
+
+box-shadow:0 15px 45px rgba(0,0,0,.15);
+
+overflow:hidden;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(20px);
+
+transition:.35s;
+
+z-index:5000;
+
+}
+
+
+/*==========
+       Show User Menu
+        =======*/
+
+.user-dropdown.active{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
+
+
+
+/*==========
+        User Header
+        =======*/
+.user-header{
+
+padding:22px;
+
+background:linear-gradient(135deg,#ff6a00,#ff914d);
+
+color:#fff;
+
+}
+
+.user-header h4{
+
+font-size:20px;
+
+margin-bottom:5px;
+
+}
+
+.user-header p{
+
+font-size:14px;
+
+opacity:.9;
+
+}
+
+
+/*==========
+        User Links
+        =======*/
+
+.user-dropdown a{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+padding:16px 22px;
+
+color:#444;
+
+transition:.3s;
+
+font-weight:500;
+
+}
+
+.user-dropdown a:hover{
+
+background:#f8f8f8;
+
+color:var(--primary);
+
+padding-left:28px;
+
+}
+
+.user-dropdown hr{
+
+border:none;
+
+height:1px;
+
+background:#eee;
+
+margin:8px 0;
+
+}
+
+.user-dropdown i{
+
+width:20px;
+
+text-align:center;
+
+}

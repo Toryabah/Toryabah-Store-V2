@@ -1,3 +1,15 @@
+/*=============================
+ PRE LOADER
+==============================*/
+
+
+window.addEventListener("load",function(){
+
+    document.getElementById("preloader").style.display="none";
+
+});
+
+
 // =========================================
 // TORYABAH STORE
 // cart.js
@@ -290,7 +302,42 @@ function clearCart() {
 }
 
 
+/*=============================
+ BACK TO TOP BUTTON
+==============================*/
 
+const topBtn = document.createElement("button");
+
+topBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+
+topBtn.className = "top-btn";
+
+document.body.appendChild(topBtn);
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top:0,
+        behavior:"smooth"
+
+    });
+
+});
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 500){
+
+        topBtn.classList.add("show");
+
+    }else{
+
+        topBtn.classList.remove("show");
+
+    }
+
+});
 // ------------------------------
 // INITIALIZE
 // ------------------------------

@@ -1,3 +1,47 @@
+// ABOUT PAGE COUNTER
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+
+        const target = Number(counter.dataset.target);
+
+        const updateCounter = () => {
+
+            const current = Number(counter.innerText.replace(/,/g, ""));
+
+            const increment = Math.ceil(target / 80);
+
+            if (current < target) {
+
+                counter.innerText = current + increment > target
+                    ? target
+                    : current + increment;
+
+                setTimeout(updateCounter, 20);
+
+            } else {
+
+                counter.innerText = target.toLocaleString() + "+";
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+});
+
+
+
+/* HOME PAGE COUNT DOWN */
+
+
 const endDate = new Date();
 
 endDate.setDate(endDate.getDate() + 5);
@@ -26,3 +70,7 @@ document.getElementById("seconds").textContent=seconds;
 setInterval(updateCountdown,1000);
 
 updateCountdown();
+
+
+
+
