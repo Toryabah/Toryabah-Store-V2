@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toryabah Store | Shop Smart, Live Better</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/wishlist.css">
+
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/backtotop.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!---PRELOADER-->
+
+
+    <div id="preloader">
+        <div class="loader"></div>
+        <h2>Hello 👋 Welcome to Toryabah Store</h2>
+    </div>
+
+
+    <!-- Header -->
+    
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            Toryabah <span>Store</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products...">
+
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Icons -->
+        <div class="nav-icons">
+            
+
+            <a href="javascript:void(0)"
+                class="wishlist-icon"
+                onclick="openWishlist()">
+
+                <i class="far fa-heart"></i>
+                <span class="wishlist-count">0</span>
+            </a>
+
+            <a href="javascript:void(0)" onclick="openCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <!-- User Icon Activate-->
+
+            <div class="user-menu">
+
+            <button class="user-btn" onclick="toggleUserMenu()">
+
+                <i class="far fa-user"></i>
+
+            </button>
+
+        <div class="user-dropdown" id="userDropdown">
+
+            <div class="user-header">
+
+                <h4>Hello 👋</h4>
+
+                <p>Welcome to Toryabah Store</p>
+
+            </div>
+
+            <a href="#">
+                <i class="fas fa-user-circle"></i>
+                My Profile
+            </a>
+
+            <a href="#">
+                <i class="fas fa-box"></i>
+                My Orders
+            </a>
+
+            <a href="javascript:void(0)" onclick="openWishlist()">
+                <i class="fas fa-heart"></i>
+                Wishlist
+            </a>
+
+            <a href="contact.html">
+                <i class="fas fa-headset"></i>
+                Customer Support
+            </a>
+
+            <hr>
+
+            <a href="#">
+                <i class="fas fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <!-- Hero -->
+    <!-- ==========================
+        PREMIUM Shop HERO SECTION
+=========================== -->
+<!-- ===========================
+CONTACT HERO
+============================ -->
+
+<section class="contact-hero">
+
+<div class="container">
+
+<span>We're Here To Help</span>
+
+<h1>
+
+Get In Touch With
+
+<span>Toryabah Store</span>
+
+</h1>
+
+<p>
+
+Have questions about a product, your order or need support?
+We're always ready to assist you.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="contact-form-section">
+
+<div class="container">
+
+<div class="contact-wrapper">
+
+<div class="contact-left">
+
+<h2>
+
+Send Us A Message
+
+</h2>
+
+<p>
+
+Fill in the form below and we'll respond as soon as possible.
+
+</p>
+
+<form id="contactForm">
+
+<input
+type="text"
+name="name"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+<textarea
+name="message"
+rows="6"
+placeholder="Your Message"
+required></textarea>
+
+<button
+type="submit"
+class="primary-btn">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+<div class="contact-right">
+
+<img
+
+src="assets/image/contact-illustration.png"
+
+alt="Contact">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!--=====================================
+GOOGLE MAP
+======================================-->
+
+<section class="map-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                Find Us
+
+            </span>
+
+            <h2>
+
+                Visit Our Location
+
+            </h2>
+
+        </div>
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="contact-info">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<i class="fas fa-location-dot"></i>
+
+<h3>Visit Us</h3>
+
+<p>
+
+Lagos, Nigeria
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-phone"></i>
+
+<h3>Call Us</h3>
+
+<p>
+
++234 XXX XXX XXXX
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-envelope"></i>
+
+<h3>Email Us</h3>
+
+<p>
+
+support@toryabahstore.com
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-clock"></i>
+
+<h3>Working Hours</h3>
+
+<p>
+
+Mon - Sat
+
+8:00 AM - 6:00 PM
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+    
+<!--==============================
+NEWSLETTER
+===============================-->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-wrapper">
+
+            <div class="newsletter-content">
+
+                <span class="newsletter-tag">
+                    📩 NEWSLETTER
+                </span>
+
+                <h2>
+                    Stay Updated With
+                    <span>Toryabah Store</span>
+                </h2>
+
+                <p>
+
+                    Subscribe to receive exclusive discounts,
+                    flash sales, new arrivals and special offers
+                    delivered directly to your inbox.
+
+                </p>
+
+            </div>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required>
+
+                <button type="submit">
+
+                    Subscribe
+
+                    <i class="fas fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=====================================
+FAQ
+======================================-->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+FAQ
+
+</span>
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+How long does delivery take?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Delivery usually takes
+
+2–5 business days depending on your location.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Can I return a product?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Yes.
+
+Returns are accepted within 7 days
+provided the product is unused.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+What payment methods do you accept?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+We securely accept card payments
+through Paystack.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Do you offer nationwide delivery?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Yes.
+
+We deliver across Nigeria.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+    
+
+   <!--=====================================
+        PREMIUM FOOTER
+======================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- Company -->
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+                    Toryabah <span>Store</span>
+                </a>
+
+                <p>
+                    Toryabah Store is your trusted destination for premium laptops,
+                    smartphones, smart gadgets and quality accessories at affordable
+                    prices.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="shop.html">Shop</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Customer Support -->
+
+            <div class="footer-column">
+
+                <h3>Customer Support</h3>
+
+                <ul>
+
+                    <li><a href="#">Help Center</a></li>
+
+                    <li><a href="#">Shipping</a></li>
+
+                    <li><a href="#">Returns</a></li>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>Contact Us</h3>
+
+                <ul class="contact-info">
+
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        Lagos, Nigeria
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        +234 XXX XXX XXXX
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        support@toryabahstore.com
+                    </li>
+
+                </ul>
+
+                <div class="payment-icons">
+
+                    <i class="fab fa-cc-visa"></i>
+
+                    <i class="fab fa-cc-mastercard"></i>
+
+                    <i class="fab fa-cc-paypal"></i>
+
+                    <i class="fas fa-credit-card"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Toryabah Store.
+                All Rights Reserved.
+
+            </p>
+
+            <span>
+
+                Designed by
+                <strong>Toryabah Tech</strong>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<div id="toast" class="toast">
+
+    <i class="fas fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Message sent successfully!
+    </span>
+
+</div>
+
+    <!-- JS -->
+
+    <script src="assets/js/products.js"></script>
+
+<script src="assets/js/cart.js"></script>
+
+<script src="assets/js/modal.js"></script>
+
+<script src="assets/js/wishlist.js"></script>
+
+
+<script src="assets/js/count.js"></script>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/navbar.js"></script>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/payment.js"></script>
+
+
+
+
+        <a href="https://wa.me/+2348142715428" 
+                style="position:fixed;bottom:60px;right:20px;
+                background:#25D366;color:white;
+                padding:15px;border-radius:50%;">
+                Chat
+            </a>
+
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+            <script>
+
+                emailjs.init({
+
+                publicKey:"vxznrWkSyGQeq51Ki"
+
+                });
+
+</script>
+
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

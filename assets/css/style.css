@@ -964,6 +964,8 @@ box-shadow:0 15px 40px rgba(0,0,0,.08);
 
   border:1px solid #f2f2f2;
 
+  overflow: hidden;
+
 }
 
 .product-card:hover{

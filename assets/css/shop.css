@@ -1,0 +1,325 @@
+/*====================================
+SHOP HERO
+====================================*/
+
+.shop-hero{
+
+padding:120px 0;
+
+text-align:center;
+
+background:linear-gradient(135deg,#111,#222);
+
+color:#fff;
+
+}
+
+.shop-tag{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:30px;
+
+margin-bottom:20px;
+
+font-weight:600;
+
+}
+
+.shop-hero h1{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.shop-hero h1 span{
+
+color:var(--primary);
+
+}
+
+.shop-hero p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+/*FILTER STYLING */
+
+.shop-filter{
+
+padding:40px 0;
+
+background:#fff;
+
+}
+
+.filter-buttons{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+.filter-buttons button{
+
+padding:12px 25px;
+
+border:none;
+
+background:#f3f3f3;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.filter-buttons button:hover,
+
+.filter-buttons button.active{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+/* Shop-Tools */
+
+.shop-tools{
+
+padding:30px 0;
+
+}
+
+.tools-grid{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.search-shop{
+
+position:relative;
+
+flex:1;
+
+}
+
+.search-shop input{
+
+width:100%;
+
+padding:15px 20px;
+
+padding-right:50px;
+
+border:1px solid #ddd;
+
+border-radius:40px;
+
+}
+
+.search-shop i{
+
+position:absolute;
+
+right:20px;
+
+top:18px;
+
+color:#777;
+
+}
+
+.shop-tools select{
+
+padding:15px;
+
+border-radius:12px;
+
+border:1px solid #ddd;
+
+}
+
+
+/*==============================
+SHOP RESULT BAR
+==============================*/
+
+.shop-results{
+
+padding:20px 0;
+
+}
+
+.results-container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+.results-container p{
+
+font-size:16px;
+
+color:#555;
+
+}
+
+.view-icons{
+
+display:flex;
+
+gap:12px;
+
+}
+
+.view-icons button{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+background:#f3f3f3;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.view-icons button.active,
+
+.view-icons button:hover{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+
+/*
+
+.pagination-section{
+
+padding:60px 0;
+
+}
+
+.pagination{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+}
+
+.pagination button{
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+background:#f3f3f3;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.pagination button.active,
+
+.pagination button:hover{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+        */
+
+
+/*  Empty Products State
+
+When there are no matching search results, show a friendly message.  */
+
+
+
+.no-products{
+
+text-align:center;
+
+padding:100px 20px;
+
+}
+
+.no-products h2{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.no-products p{
+
+color:#777;
+
+}
+
+
+
+
